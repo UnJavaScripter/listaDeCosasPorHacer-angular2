@@ -1,3 +1,6 @@
-<p>
-  lista-de-cosas Works!
-</p>
+<ul class="unstyled">
+    <li *ngFor="#todo of todos">
+        <input type="checkbox" [(ngModel)]="todo.done">
+        <span class="done-{{todo.done}}">{{todo.text}}</span>
+    </li>
+</ul>

@@ -1,17 +1,12 @@
 import {Component, Output, EventEmitter} from 'angular2/core';
-import {Todo} from '../cosa';
+import {Cosa} from '../cosa';
 
 @Component({
     selector: 'formulario',
-    template: `
-    <form (ngSubmit)="addTodo()">
-      <input type="text" [(ngModel)]="task" size="30"
-             placeholder="add new todo here">
-      <input class="btn-primary" type="submit" value="add">
-    </form>`
+    templateUrl: './app/components/formulario/formulario.html'
 })
 export class Formulario {
-    @Output() newTask = new EventEmitter<Todo>();
+    @Output() newTask = new EventEmitter<Cosa>();
     task: string = '';
 
     addTodo() {
@@ -22,10 +17,3 @@ export class Formulario {
     }
 }
 
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

@@ -1,5 +1,6 @@
-<p>
-  lista-de-cosas-por-hacer Works!
-</p>
+<h2>Todo</h2>
+<span>{{remaining}} of {{todos.length}} remaining</span>
+[ <a (click)="archive()">archive</a> ]
 
-<router-outlet></router-outlet>
+<lista-de-cosas [todos]="todos"></lista-de-cosas>
+<formulario (newTask)="addTask($event)"></formulario>
