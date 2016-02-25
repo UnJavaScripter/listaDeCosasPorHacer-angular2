@@ -1,6 +1,6 @@
 <ul class="unstyled">
-    <li *ngFor="#todo of todos">
-        <input type="checkbox" [(ngModel)]="todo.done">
-        <span class="done-{{todo.done}}">{{todo.text}}</span>
+    <li *ngFor="#cosa of cosas">
+        <input type="checkbox" [(ngModel)]="cosa.completada">
+        <span class="completada-{{cosa.completada}}">{{cosa.texto}}</span>
     </li>
 </ul>

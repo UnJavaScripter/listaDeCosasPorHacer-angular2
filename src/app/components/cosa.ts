@@ -1,6 +1,6 @@
 export interface Cosa {
-  text: string,
-  done: boolean
+  texto: string,
+  completada: boolean
 }
 
 

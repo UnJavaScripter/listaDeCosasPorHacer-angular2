@@ -7,6 +7,6 @@ import {Cosa} from '../cosa';
     templateUrl: './app/components/lista-de-cosas/lista-de-cosas.html'
 })
 export class ListaDeCosas {
-    @Input() todos: Cosa[];
+    @Input() cosas: Cosa[];
 }
 

@@ -10,25 +10,27 @@ import {Formulario} from './components/formulario/formulario';
     styleUrls: ['./app/lista-de-cosas-por-hacer.css']
 })
 export class listaDeCosasPorHacer {
-    todos: Cosa[] = [
-        { text: 'learn angular', done: true },
-        { text: 'build an angular app', done: false }
+    cosasPendientes: Cosa[] = [
+        { texto: 'asistir a un evento acerca de angular2', completada: true },
+        { texto: 'aprender angular2', completada: false },
+        { texto: 'hacer una app con angular2', completada: false }
     ];
 
     get remaining() {
-        return this.todos.reduce((count: number, todo: Cosa) => count + +!todo.done, 0);
+        return this.cosasPendientes.reduce((count: number, cosaPendiente: Cosa) => count + +!cosaPendiente.completada, 0);
     }
 
-    archive(): void {
-        var oldTodos = this.todos;
-        this.todos = [];
-        oldTodos.forEach((todo: Cosa) => {
-            if (!todo.done) this.todos.push(todo);
+    archivar(): void {
+        let cosasAnteriores = this.cosasPendientes;
+        this.cosasPendientes = [];
+        cosasAnteriores.forEach((cosaPendiente: Cosa) => {
+            if (!cosaPendiente.completada) this.cosasPendientes.push(cosaPendiente);
         });
     }
 
-    addTask(task: Cosa) {
-        this.todos.push(task);
+    agregarTarea(tarea: Cosa) {
+        console.log('me disparé')
+        this.cosasPendientes.push(tarea);
     }
 }
 

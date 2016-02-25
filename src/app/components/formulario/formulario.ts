@@ -6,14 +6,14 @@ import {Cosa} from '../cosa';
     templateUrl: './app/components/formulario/formulario.html'
 })
 export class Formulario {
-    @Output() newTask = new EventEmitter<Cosa>();
-    task: string = '';
+    @Output() nuevaTarea = new EventEmitter<Cosa>();
+    tarea: string = '';
 
-    addTodo() {
-        if (this.task) {
-            this.newTask.next({ text: this.task, done: false });
+    agregarCosaPorHacer() {
+        if (this.tarea) {
+            this.nuevaTarea.next({ texto: this.tarea, completada: false });
         }
-        this.task = '';
+        this.tarea = '';
     }
 }
 

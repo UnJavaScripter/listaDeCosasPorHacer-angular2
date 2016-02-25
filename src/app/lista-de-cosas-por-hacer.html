@@ -1,6 +1,6 @@
-<h2>Todo</h2>
-<span>{{remaining}} of {{todos.length}} remaining</span>
-[ <a (click)="archive()">archive</a> ]
+<h2>Cosas por Hacer</h2>
+<span>{{remaining}} de {{cosasPendientes.length}} pendientes</span>
+[ <a (click)="archivar()">Archivar</a> ]
 
-<lista-de-cosas [todos]="todos"></lista-de-cosas>
-<formulario (newTask)="addTask($event)"></formulario>
+<lista-de-cosas [cosas]="cosasPendientes"></lista-de-cosas>
+<formulario (nuevaTarea)="agregarTarea($event)"></formulario>
