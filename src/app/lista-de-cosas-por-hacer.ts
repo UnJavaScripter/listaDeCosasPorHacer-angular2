@@ -29,7 +29,6 @@ export class listaDeCosasPorHacer {
     }
 
     agregarTarea(tarea: Cosa) {
-        console.log('me disparé')
         this.cosasPendientes.push(tarea);
     }
 }
