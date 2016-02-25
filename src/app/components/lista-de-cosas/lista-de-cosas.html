@@ -1,4 +1,4 @@
-<ul class="unstyled">
+<ul>
     <li *ngFor="#cosa of cosas">
         <input type="checkbox" [(ngModel)]="cosa.completada">
         <span class="completada-{{cosa.completada}}">{{cosa.texto}}</span>
