@@ -9,8 +9,10 @@ Esta es una copia del demo que se encuentra en el sitio web [Angular.io](https:/
 `$ git clone https://github.com/UnJavaScripter/listaDeCosasPorHacer-angular2.git`
 
 ### 3. Instalar dependencias
-`$ cd listaDeCosasPorHacer-angular2`
-`$ npm install`
+```
+$ cd listaDeCosasPorHacer-angular2
+$ npm install
+```
 
 El código original lo provee Google, aquí su _copyright note_:
 ```
