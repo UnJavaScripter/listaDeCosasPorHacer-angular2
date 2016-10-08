@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let tarea of listaDeCosas; let idc = index; trackBy: index">
+    <app-una-cosa [titulo]="tarea.titulo" [completada]="tarea.completada" [indice]="idc"></app-una-cosa> 
+  </li>
+</ul>
